@@ -49,7 +49,8 @@ header.jb h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp
   border:1.6px solid var(--fg);border-radius:0;padding:9px 12px;
 }
 .filters input[type=search]{flex:1 1 220px;min-width:0}
-.filters select{flex:0 1 auto}
+.filters select{flex:1 1 auto;min-width:0;max-width:100%}
+.seg{max-width:100%}
 .seg{display:flex;flex-wrap:wrap;gap:0;border:1.6px solid var(--accent)}
 .seg button{
   font-family:var(--display);font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.03em;
@@ -95,7 +96,6 @@ footer.jb p{margin:0}
 
 <div class="wrap">
   <header class="jb">
-    <span class="jb-eyebrow">JWIC | Journée Wallonne de l'Imagerie Cardiaque</span>
     <h1>Job Board<br>Cardiologie</h1>
     <p class="jb-sub">Les postes de médecins cardiologues actuellement ouverts dans les hôpitaux belges. Service d'information gratuit : chaque offre renvoie vers l'annonce officielle de l'hôpital, auprès duquel se font les candidatures.</p>
     <span class="jb-meta" id="meta">Chargement de la liste...</span>
@@ -218,6 +218,13 @@ footer.jb p{margin:0}
   });
   document.getElementById('spec').addEventListener('change', function(){ curSpec = this.value; render(); });
   document.getElementById('q').addEventListener('input', function(){ curQ = this.value.trim(); render(); });
+
+  /* Hauteur auto quand la page est intégrée en iframe (jwic.be) */
+  var postH = function(){
+    try{ parent.postMessage({jwicJobboardHeight: document.documentElement.scrollHeight}, '*'); }catch(e){}
+  };
+  if(window.ResizeObserver) new ResizeObserver(postH).observe(document.body);
+  window.addEventListener('load', postH);
 
   fetch('jobs.json', {cache:'no-store'}).then(function(r){
     if(!r.ok) throw new Error(r.status);
