@@ -1,0 +1,223 @@
+<title>JWIC Job Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Design system jwic.be (Squarespace) : titres Archivo Black en capitales, corps Proxima Nova
+   (substitut Montserrat), accent framboise #d33d6a, boutons carrés, sections blanches. Single-theme. */
+:root{
+  --bg:#ffffff;
+  --fg:#000000;
+  --muted:#55595e;
+  --line:#e3e6ea;
+  --accent:#d33d6a;        /* framboise JWIC */
+  --accent-soft:#fbeef2;
+  --blue:#2076a9;          /* bleu secondaire JWIC */
+  --chip:#f2f4f6;
+  --display:"Archivo Black", Arial, sans-serif;
+  --body:"Montserrat", "proxima-nova", Arial, Helvetica, sans-serif;
+  color-scheme: light;
+}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--body);
+  font-size:15px;
+  line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:0;
+}
+.wrap{max-width:900px;margin:0 auto;padding-block:36px 48px;display:flex;flex-direction:column;gap:26px}
+
+header.jb{display:flex;flex-direction:column;gap:10px;text-align:center;align-items:center}
+.jb-eyebrow{font-family:var(--display);font-weight:400;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+header.jb h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(30px,6vw,52px);line-height:1.08;text-transform:uppercase;text-wrap:balance;letter-spacing:.01em}
+.jb-sub{color:var(--fg);margin:6px 0 0;max-width:68ch}
+.jb-meta{font-size:14px;color:var(--muted);margin-top:4px}
+.jb-meta strong{color:var(--accent);font-weight:700}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;justify-content:center}
+.filters input[type=search], .filters select{
+  font-family:var(--body);font-size:14px;color:var(--fg);background:var(--bg);
+  border:1.6px solid var(--fg);border-radius:0;padding:9px 12px;
+}
+.filters input[type=search]{flex:1 1 220px;min-width:0}
+.filters select{flex:0 1 auto}
+.seg{display:flex;flex-wrap:wrap;gap:0;border:1.6px solid var(--accent)}
+.seg button{
+  font-family:var(--display);font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.03em;
+  background:var(--bg);color:var(--accent);border:0;border-right:1.6px solid var(--accent);
+  padding:10px 16px;cursor:pointer;
+}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.seg button:focus-visible, .filters :focus-visible, .joblink:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.count{font-size:13px;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.05em}
+
+ul.jobs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ul.jobs li{
+  display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;
+  padding:20px 0;border-bottom:1px solid var(--line);
+}
+ul.jobs li:first-child{border-top:3px solid var(--fg)}
+.job-main{flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:4px}
+.job-title{font-family:var(--display);font-weight:400;font-size:16px;line-height:1.3;margin:0;text-transform:uppercase;letter-spacing:.01em}
+.job-hosp{color:var(--muted);font-size:14px}
+.job-hosp b{color:var(--fg);font-weight:700}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.badge{font-size:12px;font-weight:500;background:var(--chip);color:var(--muted);border-radius:0;padding:3px 10px;white-space:nowrap}
+.badge.reg{background:var(--accent);color:#fff;font-family:var(--display);font-weight:400;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.job-side{display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin-left:auto}
+.job-date{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.joblink{
+  display:inline-block;font-family:var(--display);font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.04em;
+  color:var(--accent);text-decoration:none;border:1.6px solid var(--accent);border-radius:0;padding:10px 22px;
+}
+.joblink:hover{background:var(--accent);color:#fff}
+
+.state{border:1.6px dashed var(--line);padding:32px;text-align:center;color:var(--muted)}
+.state h2{margin:0 0 6px;font-family:var(--display);font-weight:400;font-size:15px;text-transform:uppercase;color:var(--fg)}
+
+footer.jb{border-top:3px solid var(--fg);padding-top:16px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+footer.jb p{margin:0}
+@media (max-width:560px){
+  .job-side{margin-left:0;flex-direction:row;align-items:center;gap:14px}
+}
+</style>
+
+<div class="wrap">
+  <header class="jb">
+    <span class="jb-eyebrow">JWIC | Journée Wallonne de l'Imagerie Cardiaque</span>
+    <h1>Job Board<br>Cardiologie</h1>
+    <p class="jb-sub">Les postes de médecins cardiologues actuellement ouverts dans les hôpitaux belges. Service d'information gratuit : chaque offre renvoie vers l'annonce officielle de l'hôpital, auprès duquel se font les candidatures.</p>
+    <span class="jb-meta" id="meta">Chargement de la liste...</span>
+  </header>
+
+  <div class="filters" id="filters" hidden>
+    <div class="seg" role="group" aria-label="Filtrer par région">
+      <button data-reg="" aria-pressed="true">Toutes</button>
+      <button data-reg="wallonie" aria-pressed="false">Wallonie</button>
+      <button data-reg="bruxelles" aria-pressed="false">Bruxelles</button>
+      <button data-reg="flandre" aria-pressed="false">Flandre</button>
+    </div>
+    <select id="spec" aria-label="Sous-spécialité">
+      <option value="">Toutes sous-spécialités</option>
+    </select>
+    <input type="search" id="q" placeholder="Hôpital, ville, mot-clé..." aria-label="Recherche">
+  </div>
+
+  <div class="count" id="count" hidden></div>
+
+  <div class="state" id="state">
+    <h2>Chargement des offres</h2>
+    <p>La liste se charge. Si rien ne s'affiche après quelques secondes, rechargez la page.</p>
+  </div>
+
+  <ul class="jobs" id="list"></ul>
+
+  <footer class="jb">
+    <p><strong>Note :</strong> liste mise à jour chaque semaine à partir des portails de recrutement des hôpitaux et des sites spécialisés. Elle est fournie à titre informatif, sans garantie d'exhaustivité : une offre peut avoir été pourvue entre deux mises à jour.</p>
+    <p>La JWIC n'intervient pas dans le recrutement : les candidatures et questions se font directement auprès des hôpitaux via le lien de chaque offre. Pour signaler une offre manquante ou pourvue : contact via jwic.be.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var REG = {wallonie:'Wallonie', bruxelles:'Bruxelles', flandre:'Flandre'};
+  var MOIS = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+  var all = [], curReg = '', curSpec = '', curQ = '';
+
+  function fmtDate(iso){
+    if(!iso) return '';
+    var p = iso.split('-');
+    if(p.length !== 3) return iso;
+    return parseInt(p[2],10) + ' ' + (MOIS[parseInt(p[1],10)-1] || '') + ' ' + p[0];
+  }
+
+  function esc(s){
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+    });
+  }
+
+  function render(){
+    var list = document.getElementById('list');
+    var state = document.getElementById('state');
+    var count = document.getElementById('count');
+    var q = curQ.toLowerCase();
+    var rows = all.filter(function(o){
+      if(curReg && o.region !== curReg) return false;
+      if(curSpec && (o.sous_specialite || '') !== curSpec) return false;
+      if(q){
+        var hay = [o.hopital, o.site_ville, o.titre, o.sous_specialite].join(' ').toLowerCase();
+        if(hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+    list.innerHTML = rows.map(function(o){
+      var badges = '<span class="badge reg">' + esc(REG[o.region] || o.region) + '</span>';
+      if(o.sous_specialite) badges += '<span class="badge">' + esc(o.sous_specialite) + '</span>';
+      if(o.temps && o.temps !== 'non précisé') badges += '<span class="badge">' + esc(o.temps) + '</span>';
+      if(o.langue) badges += '<span class="badge">' + esc(o.langue.toUpperCase()) + '</span>';
+      var date = o.date_publication ? '<span class="job-date">Publiée le ' + esc(fmtDate(o.date_publication)) + '</span>' : '';
+      return '<li>' +
+        '<div class="job-main">' +
+          '<p class="job-title">' + esc(o.titre) + '</p>' +
+          '<span class="job-hosp"><b>' + esc(o.hopital) + '</b> : ' + esc(o.site_ville) + '</span>' +
+          '<div class="badges">' + badges + '</div>' +
+        '</div>' +
+        '<div class="job-side">' + date +
+          '<a class="joblink" href="' + esc(o.url) + '" target="_blank" rel="noopener">Voir l\'offre</a>' +
+        '</div>' +
+      '</li>';
+    }).join('');
+    if(rows.length === 0){
+      state.hidden = false;
+      state.innerHTML = '<h2>Aucune offre ne correspond</h2><p>Modifiez les filtres ou revenez après la prochaine mise à jour hebdomadaire.</p>';
+    } else {
+      state.hidden = true;
+    }
+    count.hidden = false;
+    count.textContent = rows.length + (rows.length > 1 ? ' offres affichées' : ' offre affichée') + ' sur ' + all.length;
+  }
+
+  function init(data){
+    all = (data.offres || []).slice().sort(function(a,b){
+      return (b.date_publication || '0000').localeCompare(a.date_publication || '0000');
+    });
+    var meta = document.getElementById('meta');
+    meta.innerHTML = '<strong>' + all.length + ' postes ouverts</strong> recensés | Dernière mise à jour : ' + esc(fmtDate(data.updated || ''));
+    var specs = {};
+    all.forEach(function(o){ if(o.sous_specialite) specs[o.sous_specialite] = true; });
+    var sel = document.getElementById('spec');
+    Object.keys(specs).sort().forEach(function(s){
+      var op = document.createElement('option');
+      op.value = s; op.textContent = s;
+      sel.appendChild(op);
+    });
+    document.getElementById('filters').hidden = false;
+    render();
+  }
+
+  document.getElementById('filters').addEventListener('click', function(e){
+    var b = e.target.closest('button[data-reg]');
+    if(!b) return;
+    curReg = b.getAttribute('data-reg');
+    this.querySelectorAll('button[data-reg]').forEach(function(x){
+      x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+    });
+    render();
+  });
+  document.getElementById('spec').addEventListener('change', function(){ curSpec = this.value; render(); });
+  document.getElementById('q').addEventListener('input', function(){ curQ = this.value.trim(); render(); });
+
+  fetch('jobs.json', {cache:'no-store'}).then(function(r){
+    if(!r.ok) throw new Error(r.status);
+    return r.json();
+  }).then(init).catch(function(){
+    var state = document.getElementById('state');
+    state.innerHTML = '<h2>Liste momentanément indisponible</h2><p>Rechargez la page dans quelques instants.</p>';
+  });
+})();
+</script>
