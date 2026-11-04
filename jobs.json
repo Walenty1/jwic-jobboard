@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-03",
  "offres": [
   {
    "hopital": "CHU HELORA",
@@ -59,7 +59,7 @@
    "url": "https://app.skeeled.com/offer/c/6a295218ea2bb8bea40c575f?show_description=true&language=fr",
    "date_publication": null,
    "langue": "fr",
-   "fiabilite": "verifiee"
+   "fiabilite": "a_confirmer"
   },
   {
    "hopital": "Vivalia",
@@ -110,6 +110,18 @@
    "fiabilite": "a_confirmer"
   },
   {
+   "hopital": "Clinique privée non nommée, Arlon (annonce via ESC Jobs, réf. AF-113)",
+   "site_ville": "Arlon",
+   "region": "wallonie",
+   "titre": "Cardiologist (interventional)",
+   "sous_specialite": "interventionnelle",
+   "temps": "non précisé",
+   "url": "https://jobs.escardio.org/cardiologist-interventional-belgium-91e2eefc8395",
+   "date_publication": null,
+   "langue": "en",
+   "fiabilite": "verifiee"
+  },
+  {
    "hopital": "Clinique Saint-Jean / Kliniek Sint-Jan",
    "site_ville": "Bruxelles",
    "region": "bruxelles",
@@ -146,6 +158,30 @@
    "fiabilite": "a_confirmer"
   },
   {
+   "hopital": "CHIREC (Hôpital Delta)",
+   "site_ville": "Auderghem (Bruxelles)",
+   "region": "bruxelles",
+   "titre": "Cardiologue interventionnel (h/f/x)",
+   "sous_specialite": "interventionnelle (SCA, cath lab, IVUS, athérectomie rotationnelle)",
+   "temps": "temps plein",
+   "url": "https://talents.vaia.com/companies/chirec/cardiologue-interventionnel-65193608/",
+   "date_publication": null,
+   "langue": "fr",
+   "fiabilite": "verifiee"
+  },
+  {
+   "hopital": "Hôpitaux Iris Sud",
+   "site_ville": "Bruxelles",
+   "region": "bruxelles",
+   "titre": "Cardiologues",
+   "sous_specialite": "générale",
+   "temps": "non précisé",
+   "url": "https://be.jooble.org/vacatures-cardiologue",
+   "date_publication": "2026-10-16",
+   "langue": "fr",
+   "fiabilite": "a_confirmer"
+  },
+  {
    "hopital": "Groupe hospitalier privé non nommé (annonce de recruteur PhD-Jobs.NET)",
    "site_ville": "Bruxelles (centre-ville)",
    "region": "bruxelles",
@@ -167,7 +203,7 @@
    "url": "https://www.sintmaria.be/nl/werken-bij-ons/vacatures-voor-arts-specialisten/voltijds-arts-specialist-cardiologie",
    "date_publication": null,
    "langue": "nl",
-   "fiabilite": "verifiee"
+   "fiabilite": "a_confirmer"
   },
   {
    "hopital": "az Vesalius (activité partielle au Jessa Ziekenhuis Hasselt)",
@@ -179,7 +215,7 @@
    "url": "https://www.werkenbijazvesalius.be/vacature.php?id=406",
    "date_publication": null,
    "langue": "nl",
-   "fiabilite": "verifiee"
+   "fiabilite": "a_confirmer"
   },
   {
    "hopital": "AZ Diest",
@@ -240,6 +276,42 @@
    "date_publication": null,
    "langue": "nl",
    "fiabilite": "a_confirmer"
+  },
+  {
+   "hopital": "ZOL (Ziekenhuis Oost-Limburg), site ZOL Maas en Kempen",
+   "site_ville": "Maaseik",
+   "region": "flandre",
+   "titre": "Arts-specialist in de Cardiologie : Hartfalen, cardiale oncologie en revalidatie",
+   "sous_specialite": "insuffisance cardiaque, cardio-oncologie, revalidation",
+   "temps": "non précisé",
+   "url": "https://be.jooble.org/jdp/3506583228316075415",
+   "date_publication": "2026-10-16",
+   "langue": "nl",
+   "fiabilite": "verifiee"
+  },
+  {
+   "hopital": "Mediport : Medical Center Cadix (centre médical, hors hôpital)",
+   "site_ville": "Antwerpen",
+   "region": "flandre",
+   "titre": "Cardiovascular Specialist",
+   "sous_specialite": "générale et électrophysiologie (avec activité en cath lab)",
+   "temps": "temps plein",
+   "url": "https://www.jobijoba.be/annonce/67/74e67083e80bac1433fda1ee7bcde375",
+   "date_publication": "2026-11-03",
+   "langue": "en",
+   "fiabilite": "verifiee"
+  },
+  {
+   "hopital": "Medpace (CRO : recherche clinique, hors hôpital)",
+   "site_ville": "Leuven",
+   "region": "flandre",
+   "titre": "Cardiologist : Medical Director (Core Labs)",
+   "sous_specialite": "imagerie cardiaque et ECG (lecture centralisée pour essais cliniques)",
+   "temps": "temps plein",
+   "url": "https://www.jobijoba.be/annonce/67/b9d85216e2cb8af3e5aa96682d76ca0c",
+   "date_publication": "2026-10-27",
+   "langue": "en",
+   "fiabilite": "verifiee"
   }
  ]
 }
