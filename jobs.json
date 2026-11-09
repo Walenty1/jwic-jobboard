@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-09",
  "offres": [
   {
    "hopital": "CHU HELORA",
@@ -59,7 +59,7 @@
    "url": "https://app.skeeled.com/offer/c/6a295218ea2bb8bea40c575f?show_description=true&language=fr",
    "date_publication": null,
    "langue": "fr",
-   "fiabilite": "a_confirmer"
+   "fiabilite": "verifiee"
   },
   {
    "hopital": "Vivalia",
@@ -106,7 +106,19 @@
    "temps": "non précisé",
    "url": "https://jobs.escardio.org/cardiologist-non-interventional-belgium-8c6c7894a266",
    "date_publication": null,
-   "langue": "fr",
+   "langue": "en",
+   "fiabilite": "verifiee"
+  },
+  {
+   "hopital": "Hôpital non nommé, région de Liège (annonce via recruteur BEST MED CAREER)",
+   "site_ville": "région de Liège",
+   "region": "wallonie",
+   "titre": "Consultant Cardiologist for Belgian hospital in the area of Liege",
+   "sous_specialite": "générale (cardiologie classique, sans techniques spécifiques requises)",
+   "temps": "non précisé (contrat permanent)",
+   "url": "https://isth.gr/theseis-ergasias/consultant-cardiologist-for-belgian-hospital-in-the-area-of-liege/",
+   "date_publication": null,
+   "langue": "en",
    "fiabilite": "a_confirmer"
   },
   {
@@ -131,7 +143,7 @@
    "url": "https://jobs.smartrecruiters.com/CliniqueSaint-Jean/744000148941969-nous-recherchons-un-cardiologue-m-f-x-",
    "date_publication": "2026-10-22",
    "langue": "fr",
-   "fiabilite": "verifiee"
+   "fiabilite": "a_confirmer"
   },
   {
    "hopital": "Clinique Saint-Jean / Kliniek Sint-Jan",
@@ -155,7 +167,7 @@
    "url": "https://www.jobijoba.be/annonce/67/3d65c1b95c8cf477d1598426af72b664",
    "date_publication": "2026-10-22",
    "langue": "fr",
-   "fiabilite": "a_confirmer"
+   "fiabilite": "verifiee"
   },
   {
    "hopital": "CHIREC (Hôpital Delta)",
