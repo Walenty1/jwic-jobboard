@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-23",
  "offres": [
   {
    "hopital": "CHU HELORA",
@@ -62,6 +62,18 @@
    "fiabilite": "verifiee"
   },
   {
+   "hopital": "CHU UCL Namur",
+   "site_ville": "Dinant et Namur (site Sainte-Elisabeth, services de cardiologie communs)",
+   "region": "wallonie",
+   "titre": "Médecin cardiologue (sites de Dinant et Sainte-Elisabeth)",
+   "sous_specialite": "imagerie non invasive (échocardiographie), rythmologie diagnostique et interventionnelle, interventionnelle",
+   "temps": "temps plein (100 %, indépendant, avec gardes)",
+   "url": "https://jobijoba.be/annonce/67/d040ab1e73c54cec8ff269bc075c8157",
+   "date_publication": null,
+   "langue": "fr",
+   "fiabilite": "verifiee"
+  },
+  {
    "hopital": "Vivalia",
    "site_ville": "Bastogne",
    "region": "wallonie",
@@ -71,7 +83,7 @@
    "url": "https://www.jobijoba.be/annonce/67/a7efd1d7d2af4f2cb3658fa429eb3bae",
    "date_publication": "2026-10-16",
    "langue": "fr",
-   "fiabilite": "a_confirmer"
+   "fiabilite": "verifiee"
   },
   {
    "hopital": "Vivalia (CH Centre Ardennes)",
@@ -83,19 +95,19 @@
    "url": "https://www.jobijoba.be/annonce/67/5b6f62eb1cb68bde9bd6ae220da4b890",
    "date_publication": "2026-06-24",
    "langue": "fr",
-   "fiabilite": "a_confirmer"
+   "fiabilite": "verifiee"
   },
   {
    "hopital": "Clinique Saint-Luc Bouge",
    "site_ville": "Bouge (Namur)",
    "region": "wallonie",
-   "titre": "Cardiologue (8/10e)",
-   "sous_specialite": "générale (service avec cardiologie et rythmologie interventionnelles)",
+   "titre": "Un.e cardiologue (8/10e)",
+   "sous_specialite": "interventionnelle (B3) et rythmologie interventionnelle (FA), activité aiguë et structurelle",
    "temps": "temps partiel (8/10)",
-   "url": "https://www.amub-ulb.be/node/2629",
+   "url": "https://www.amub-ulb.be/Job/une-cardiologue",
    "date_publication": null,
    "langue": "fr",
-   "fiabilite": "a_confirmer"
+   "fiabilite": "verifiee"
   },
   {
    "hopital": "Clinique non nommée, région de Charleroi (annonce via ESC Jobs, réf. AF-112)",
@@ -137,18 +149,6 @@
    "hopital": "Clinique Saint-Jean / Kliniek Sint-Jan",
    "site_ville": "Bruxelles",
    "region": "bruxelles",
-   "titre": "Cardiologue (m/f/x)",
-   "sous_specialite": "générale",
-   "temps": "non précisé",
-   "url": "https://jobs.smartrecruiters.com/CliniqueSaint-Jean/744000148941969-nous-recherchons-un-cardiologue-m-f-x-",
-   "date_publication": "2026-10-22",
-   "langue": "fr",
-   "fiabilite": "a_confirmer"
-  },
-  {
-   "hopital": "Clinique Saint-Jean / Kliniek Sint-Jan",
-   "site_ville": "Bruxelles",
-   "region": "bruxelles",
    "titre": "Cardiologue (H/F/X) spécialisé en cardiologie interventionnelle",
    "sous_specialite": "interventionnelle",
    "temps": "non précisé",
@@ -167,7 +167,7 @@
    "url": "https://www.jobijoba.be/annonce/67/3d65c1b95c8cf477d1598426af72b664",
    "date_publication": "2026-10-22",
    "langue": "fr",
-   "fiabilite": "verifiee"
+   "fiabilite": "a_confirmer"
   },
   {
    "hopital": "CHIREC (Hôpital Delta)",
@@ -206,6 +206,30 @@
    "fiabilite": "a_confirmer"
   },
   {
+   "hopital": "Cliniques de l'Europe / Europa Ziekenhuizen",
+   "site_ville": "Uccle (Bruxelles)",
+   "region": "bruxelles",
+   "titre": "Interventionele Cardioloog (M/V/X)",
+   "sous_specialite": "interventionnelle",
+   "temps": "temps partiel (indépendant)",
+   "url": "https://be.jooble.org/jdp/-3521355361552380438",
+   "date_publication": "2026-11-04",
+   "langue": "nl",
+   "fiabilite": "a_confirmer"
+  },
+  {
+   "hopital": "CHU non nommé, centre de Bruxelles (annonce via recruteur AGISANTÉ)",
+   "site_ville": "Bruxelles (centre)",
+   "region": "bruxelles",
+   "titre": "Cardiologue interventionnel coronarographiste",
+   "sous_specialite": "interventionnelle (coronarographie)",
+   "temps": "non précisé",
+   "url": "https://be.jooble.org/desc/7933548726413987061",
+   "date_publication": "2026-09-16",
+   "langue": "fr",
+   "fiabilite": "a_confirmer"
+  },
+  {
    "hopital": "AZ Sint-Maria",
    "site_ville": "Halle",
    "region": "flandre",
@@ -215,19 +239,19 @@
    "url": "https://www.sintmaria.be/nl/werken-bij-ons/vacatures-voor-arts-specialisten/voltijds-arts-specialist-cardiologie",
    "date_publication": null,
    "langue": "nl",
-   "fiabilite": "a_confirmer"
+   "fiabilite": "verifiee"
   },
   {
    "hopital": "az Vesalius (activité partielle au Jessa Ziekenhuis Hasselt)",
    "site_ville": "Tongeren",
    "region": "flandre",
    "titre": "Cardioloog (onbepaalde duur)",
-   "sous_specialite": "générale (pacemakers : implantation et suivi)",
+   "sous_specialite": "générale (pacemakers : implantation et suivi, LBBAP inclus)",
    "temps": "temps plein",
    "url": "https://www.werkenbijazvesalius.be/vacature.php?id=406",
    "date_publication": null,
    "langue": "nl",
-   "fiabilite": "a_confirmer"
+   "fiabilite": "verifiee"
   },
   {
    "hopital": "AZ Diest",
@@ -236,10 +260,10 @@
    "titre": "Cardioloog",
    "sous_specialite": "générale",
    "temps": "non précisé",
-   "url": "https://www.vdab.be/vindeenjob/vacatures/74417271/cardioloog",
+   "url": "https://azdiest.careersite.be/nl/vacature/309/cardioloog",
    "date_publication": "2026-08-20",
    "langue": "nl",
-   "fiabilite": "verifiee"
+   "fiabilite": "a_confirmer"
   },
   {
    "hopital": "Heilig Hartziekenhuis Mol",
